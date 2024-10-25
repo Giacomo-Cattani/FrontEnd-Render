@@ -9,9 +9,10 @@ const data = ref(null)
 
 onMounted(async () => {
   try {
-    const response = await axios.get('http://localhost:3000/your-endpoint')
+    const response = await axios.get('http://localhost:3000/')
     data.value = response.data
   } catch (error) {
+    data.value = 'There was a problem with the axios operation'
     console.error('There was a problem with the axios operation:', error)
   }
 })
