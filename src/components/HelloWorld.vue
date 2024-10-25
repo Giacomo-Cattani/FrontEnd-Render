@@ -30,6 +30,7 @@ onMounted(async () => {
 
   <p v-if="data">
     API Data: {{ data }}
+    {{ !data ? "Problemi Axios" : "" }}
   </p>
 
   <p>
