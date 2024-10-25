@@ -9,7 +9,7 @@ const data = ref(null)
 
 onMounted(async () => {
   try {
-    const response = await axios.get('http://localhost:3000/')
+    const response = await axios.get('https://backend-render-ocex.onrender.com')
     data.value = response.data
   } catch (error) {
     console.error('There was a problem with the axios operation:', error)
